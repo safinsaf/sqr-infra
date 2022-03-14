@@ -1,0 +1,9 @@
+gateway_docker_image_name: safinsaf/sqr-gateway
+gateway_docker_image_tag: latest
+gateway_outer_port: 3000
+gateway_inner_port: 3000
+docker_restart_handler_state: restarted
+gateway_path: /opt/gateway/
+
+attractions_docker_image_name: safinsaf/attractions
+attractions_docker_image_tag: latest

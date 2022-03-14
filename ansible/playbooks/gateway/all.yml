@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: ubuntu
+  roles:
+    - role: '../../roles/docker_install'
+      become: true
+    - role: '../../roles/gateway'
+    #- role: docker_install
+    #  become: true
+    #- role: gateway
