@@ -35,9 +35,10 @@ resource "aws_instance" "sqr_project" {
     inline = ["sudo apt update && sudo apt update  && sudo apt install python3-pip -y"]
   }
 
-  provisioner "local-exec" {
-    command = "ansible-playbook -u ${var.ansible_user} -i '${aws_instance.sqr_project.public_ip},' --private-key ${var.private_key} ../ansible/setup_app.yml"
-  }
+  # provisioner "local-exec" {
+  #   working_dir = "${path.module}/../ansible/"
+  #   command = "ansible-playbook -u ../terraform/${var.ansible_user} -i '${aws_instance.sqr_project.public_ip},' --private-key ${var.private_key} playbooks/gateway/main.yml"
+  # }
 
   tags = {
     Name = "sqr_project"

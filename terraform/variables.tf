@@ -80,13 +80,13 @@ variable "sg_ingress_ssh" {
 variable "sg_ingress_all_start_http" {
   description = "Port used for the ingress rule"
   type        = string
-  default     = "80"
+  default     = "3000"
 }
 
 variable "sg_ingress_all_end_http" {
   description = "Port used for the ingress rule"
   type        = string
-  default     = "80"
+  default     = "3000"
 }
 
 variable "sg_ingress_all_start_https" {
