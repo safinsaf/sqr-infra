@@ -27,6 +27,13 @@
     dest: "{{ gateway_path }}/docker-compose.yml"
     mode: u=rw,g=r,o=r
 
+- name: Copy env
+  template:
+    src: .env.j2
+    dest: "{{ gateway_path }}/.env"
+    mode: u=rw,g=r,o=r
+
+
 - name: Run docker-compose
   become: true
   community.docker.docker_compose:

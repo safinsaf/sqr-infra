@@ -2,10 +2,12 @@ version: "3.3"
 services:
   gateway:
     image: {{ gateway_docker_image_name }}:{{ gateway_docker_image_tag }}
+    environment:
+      host_ip: '3.22.68.156'
     ports:
       - "{{ gateway_outer_port }}:{{ gateway_inner_port }}"
     
   attractions:
-    image: {{ attractions_docker_image_name }}:{{ attractions_docker_image_tag }}"
+    image: {{ attractions_docker_image_name }}:{{ attractions_docker_image_tag }}
     ports:
       - "8000:8000"
